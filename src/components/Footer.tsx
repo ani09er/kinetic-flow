@@ -1,12 +1,14 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <footer className="relative py-16 px-6 border-t border-border/30">
       <div className="max-w-5xl mx-auto">
         <div className="flex flex-col md:flex-row items-start justify-between gap-8">
           <div>
-            <div className="font-display text-lg font-bold tracking-tight mb-2">
+            <Link to="/" className="font-display text-lg font-bold tracking-tight mb-2 block hover:text-velocity transition-colors">
               AIZEN STUDIO
-            </div>
+            </Link>
             <p className="font-mono text-xs text-muted-foreground max-w-xs">
               Independent game development. Control systems. Physics-driven tension.
             </p>
@@ -14,14 +16,34 @@ const Footer = () => {
 
           <div className="flex gap-12">
             <div>
+              <div className="system-label mb-3">NAVIGATION</div>
+              <div className="space-y-2">
+                <Link to="/game-systems" className="block font-mono text-xs text-muted-foreground hover:text-velocity transition-colors">
+                  Game Systems
+                </Link>
+                <Link to="/pre-launch" className="block font-mono text-xs text-muted-foreground hover:text-velocity transition-colors">
+                  Pre-Launch
+                </Link>
+                <Link to="/studio" className="block font-mono text-xs text-muted-foreground hover:text-velocity transition-colors">
+                  Studio
+                </Link>
+                <Link to="/devlogs" className="block font-mono text-xs text-muted-foreground hover:text-velocity transition-colors">
+                  Dev Logs
+                </Link>
+                <Link to="/contact" className="block font-mono text-xs text-muted-foreground hover:text-velocity transition-colors">
+                  Contact
+                </Link>
+              </div>
+            </div>
+            <div>
               <div className="system-label mb-3">LEGAL</div>
               <div className="space-y-2">
-                <a href="/privacy" className="block font-mono text-xs text-muted-foreground hover:text-velocity transition-colors">
+                <Link to="/privacy" className="block font-mono text-xs text-muted-foreground hover:text-velocity transition-colors">
                   Privacy Policy
-                </a>
-                <a href="/terms" className="block font-mono text-xs text-muted-foreground hover:text-velocity transition-colors">
+                </Link>
+                <Link to="/terms" className="block font-mono text-xs text-muted-foreground hover:text-velocity transition-colors">
                   Terms of Service
-                </a>
+                </Link>
               </div>
             </div>
             <div>
